@@ -11,11 +11,13 @@ export default createSwitch({
       title: "Navi",
       content:
         <div>
-          <h2>Navi React Projekti</h2>
-          <p>Reactin opiskelun parissa pari viime vuotta. Serverless rocks! </p>
-          <p>James K Nelson ansaitsee ehdottomasti suurimman kiitoksen ja kunnian tästä React osuudesta. Zeit.co-porukka huikean mahtavasta palvelusta ! </p>
-          <p>Big thanks goes to James K Nelson this React part and the team behind Zeit.co, you are just awesome!</p>
-          <nav><NavLink href='/about'>Kuvailu sivu</NavLink></nav>
+          <h1>Navi</h1>
+          <h2>Reititin / lataaja Reactille</h2>
+          <p>Oma toteutukseni reitittimestä ja staattisen renderöinnin kirjastosta.</p>
+          <p></p>
+          <p></p>
+          <nav><NavLink href='/reference'>Referenssi</NavLink></nav>
+          <nav><NavLink href='/about'>Kuvailu</NavLink></nav>
         </div>
     }),
 
@@ -23,6 +25,11 @@ export default createSwitch({
     '/about': createPage({
       title: "About",
       getContent: () => import('./About')
+    }),
+    // Create the reference route
+    '/reference': createPage({
+      title: "Reference",
+      getContent: () => import('./Reference')
     }),
   }
 })

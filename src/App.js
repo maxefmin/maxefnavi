@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavProvider, NavRoute, NavNotFoundBoundary } from 'react-navi';
+import { NavProvider, NavContent, NavNotFoundBoundary } from 'react-navi';
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,9 +12,11 @@ class App extends Component {
     return (
       <NavProvider navigation={this.props.navigation}>
         <div className="App">
-          <img src={logo} className="App-logo" alt="logo" />
+        <header className="App-header"><h1>Terve !</h1>
+           <img src={logo} className="App-logo" alt="logo" />
+           </header>
           <NavNotFoundBoundary render={renderNotFound}>
-            <NavRoute />
+            <NavContent />
         </NavNotFoundBoundary>
       </div>
     </NavProvider>
